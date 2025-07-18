@@ -22,17 +22,17 @@ public class TimeController {
 
     @Autowired
     private CampeonatoRepository campeonatoRepository;
+    
+    @GetMapping("/novo")
+    public String mostrarFormulario(Time time, Model model) {
+        model.addAttribute("campeonatos", campeonatoRepository.findAll());
+        return "time_form";
+    }
 
     @GetMapping
     public String listar(Model model) {
         model.addAttribute("times", timeRepository.findAll());
-        return "times/lista";
-    }
-
-    @GetMapping("/novo")
-    public String mostrarFormulario(Time time, Model model) {
-        model.addAttribute("campeonatos", campeonatoRepository.findAll());
-        return "times/formulario";
+        return "time_list";
     }
 
     @PostMapping

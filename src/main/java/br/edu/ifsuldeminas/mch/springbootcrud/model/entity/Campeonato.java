@@ -31,8 +31,74 @@ public class Campeonato {
 
     @NotBlank
     private String modalidade;
+    
+    
 
-    @OneToMany(mappedBy = "campeonato", cascade = CascadeType.ALL)
+    public Long getId() {
+		return id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+
+	public LocalDate getDataInicio() {
+		return dataInicio;
+	}
+
+
+
+	public void setDataInicio(LocalDate dataInicio) {
+		this.dataInicio = dataInicio;
+	}
+
+
+
+	public LocalDate getDataFim() {
+		return dataFim;
+	}
+
+
+
+	public void setDataFim(LocalDate dataFim) {
+		this.dataFim = dataFim;
+	}
+
+
+
+	public String getModalidade() {
+		return modalidade;
+	}
+
+
+
+	public void setModalidade(String modalidade) {
+		this.modalidade = modalidade;
+	}
+
+
+
+	public List<Time> getTimes() {
+		return times;
+	}
+
+
+
+	public void setTimes(List<Time> times) {
+		this.times = times;
+	}
+
+
+
+	@OneToMany(mappedBy = "campeonato", cascade = CascadeType.ALL)
     private List<Time> times = new ArrayList<>();
 }
 
