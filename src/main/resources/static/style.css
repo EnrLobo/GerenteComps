@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    --primary-color: #1abc9c; 
+    --primary-hover: #16a085;
+    --secondary-color: #7f8c8d;
+    --dark-color: #2c3e50;  
+    --light-color: #ecf0f1;
+    --white-color: #ffffff;
+    --danger-color: #e74c3c;
+    --border-radius: 50px;
+    --card-radius: 0.75rem;
+    --font-family: 'Poppins', sans-serif;
+    --shadow: 0 5px 15px rgba(0,0,0,0.08);
+    --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+
+body {
+    background-color: var(--white-color);
+    font-family: var(--font-family);
+    color: var(--dark-color);
+}
+
+
+.main-heading-gradient {
+    font-weight: 700;
+    font-size: 3rem;
+    background: linear-gradient(45deg, var(--primary-color), #27ae60);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+
+.btn {
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.banner-full-width {
+    width: 100vw; 
+    height: 700px; 
+    object-fit: cover; 
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    color: var(--white-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: none;
+}
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    box-shadow: var(--shadow-hover);
+}
+
+
+.card {
+    border: none; 
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-title {
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+
+.form-control, .form-select {
+    border-radius: var(--card-radius);
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(26, 188, 156, 0.25);
+}
+
+.site-footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.site-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.site-footer .footer-brand {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}

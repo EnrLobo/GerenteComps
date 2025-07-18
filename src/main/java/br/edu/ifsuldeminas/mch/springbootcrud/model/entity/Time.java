@@ -30,8 +30,79 @@ public class Time {
 
     @Min(1)
     private int numeroDeJogadores;
+    
+    
 
-    @ManyToOne
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+
+	public String getCidade() {
+		return cidade;
+	}
+
+
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+
+
+	public LocalDate getFundadoEm() {
+		return fundadoEm;
+	}
+
+
+
+	public void setFundadoEm(LocalDate fundadoEm) {
+		this.fundadoEm = fundadoEm;
+	}
+
+
+
+	public int getNumeroDeJogadores() {
+		return numeroDeJogadores;
+	}
+
+
+
+	public void setNumeroDeJogadores(int numeroDeJogadores) {
+		this.numeroDeJogadores = numeroDeJogadores;
+	}
+
+
+
+	public Campeonato getCampeonato() {
+		return campeonato;
+	}
+
+
+
+	public void setCampeonato(Campeonato campeonato) {
+		this.campeonato = campeonato;
+	}
+
+
+
+	@ManyToOne
     @JoinColumn(name = "campeonato_id")
     private Campeonato campeonato;
 }
